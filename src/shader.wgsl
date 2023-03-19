@@ -23,7 +23,7 @@ var<push_constant> pc: PushConstants;
 
 @compute
 @workgroup_size(32)
-fn hamming(
+fn count_ones(
     @builtin(global_invocation_id) global_id : vec3<u32>,
 ) -> void {
     let index : u32 = pc.offset + global_id.x;
