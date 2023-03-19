@@ -1,16 +1,8 @@
-use std::num::NonZeroU64;
-use std::path::Path;
 use std::sync::Arc;
 
 use anyhow::Context;
 use rand::RngCore;
 use wgpu::util::DeviceExt;
-
-async fn load_data(path: impl AsRef<Path>) -> anyhow::Result<Vec<u8>> {
-    let data = tokio::fs::read(path).await?;
-
-    Ok(data)
-}
 
 /// Max number of workgroups that can be dispatched in a single compute pass
 /// actual value is (1024 * 64) - 1. But to have nicer numbers will use an even value
