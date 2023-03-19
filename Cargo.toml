@@ -1,0 +1,18 @@
+[package]
+name = "wgpu-speed"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.70"
+bitflags = "2.0.2"
+bytemuck = "1.13.1"
+env_logger = "0.10.0"
+futures-intrusive = "0.5.0"
+log = "0.4.17"
+rand = "0.8.5"
+tokio = { version = "1.26.0", features = ["full"] }
+wgpu = "0.15.1"
+wgpu-types = "0.15.2"
