@@ -166,7 +166,7 @@ impl Pipeline {
             label: None,
             layout: Some(&compute_pipeline_layout),
             module: &cs_module,
-            entry_point: "hamming",
+            entry_point: "count_ones",
         });
 
         let staging_buffer = device.create_buffer_init(&wgpu::util::BufferInitDescriptor {
